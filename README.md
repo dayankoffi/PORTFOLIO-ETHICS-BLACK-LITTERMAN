@@ -14,8 +14,8 @@
 
 > *All metrics are strictly out-of-sample. No future data was used at any rebalancing date.*
 
-| Metric | 🔵 BL-ESG | ⚪ Equal-Weight 1/N |
-|--------|:---------:|:------------------:|
+| Metric | BL-ESG | Equal-Weight 1/N |
+|--------|:------:|:----------------:|
 | Cumulative Return OOS | **+22.74%** | +14.48% |
 | Annualised Return | **+21.45%** | +14.70% |
 | Annualised Volatility | **15.44%** | 16.30% |
@@ -32,7 +32,7 @@
 
 ## Walk-Forward Validation Dashboard
 
-![Walk-Forward Results](results/P2_04_walkforward_resultats.png)
+![Walk-Forward Results](results/Validation_Walk-Forward.png)
 
 *Top-left: cumulative OOS performance — BL-ESG (Sharpe 1.188) consistently above equal-weight benchmark (Sharpe 0.564). Top-right: max drawdown contained at -21.52% during Apr 2025 market stress. Bottom-left: monthly alpha positive in 10 out of 13 rebalancings, avg +1.046%/month. Bottom-right: portfolio ESG score (17.5) maintained well above universe average (13.3) throughout.*
 
@@ -67,7 +67,7 @@ The strategy applies two mandatory filters before any optimization: a **sector-r
 | Utilities | 14.73 | **16.41** | 21 | 13 |
 | Real Estate | 15.05 | **17.03** | 9 | 3 |
 
-![Screening Impact](results/P2_screening_impact.png)
+![Screening Impact](results/impact_screening.png)
 
 *Top-left: ESG score distribution shifts right after screening (mean 13.2 → 15.8). Top-right: companies retained per sector — all 11 sectors remain represented, preserving diversification. Bottom-left: ESG improvement is consistent across every sector. Bottom-right: ITR distribution collapses below the 2°C threshold (mean 2.55°C → 1.60°C).*
 
@@ -75,7 +75,7 @@ The strategy applies two mandatory filters before any optimization: a **sector-r
 
 ## Final Portfolio Allocation
 
-![Portfolio Allocation](results/P2_05_allocation_portefeuille.png)
+![Portfolio Allocation](results/Allocation_finale_portefeuille.png)
 
 *Left: 20 positions weighted by BL-ESG views, colour-coded by ESG score (red = low, green = high) — top positions align with highest ESG scores, validating view consistency. Centre: sector allocation dominated by Financials (30.4%) and Industrials (28.1%), with 9 sectors represented. Right: positive slope of weight vs ESG score confirms BL views successfully allocated more capital to ESG leaders.*
 
@@ -112,17 +112,16 @@ The strategy meets two simultaneous objectives:
 PORTFOLIO-ETHICS-BLACK-LITTERMAN/
 │
 ├── README.md
-├── esg_partie2_v3_final.ipynb     ← Main notebook (8 sections, fully documented)
+├── Portfolio_BL_ESG.ipynb         ← Main notebook (8 sections, fully documented)
 ├── requirements.txt
 │
 ├── data/
 │   └── README.md                  ← Data schema & expected Parquet files
 │
 └── results/
-    ├── P2_01_univers_avant_screening.png
-    ├── P2_screening_impact.png
-    ├── P2_04_walkforward_resultats.png
-    └── P2_05_allocation_portefeuille.png
+    ├── Validation_Walk-Forward.png
+    ├── impact_screening.png
+    └── Allocation_finale_portefeuille.png
 ```
 
 ---
